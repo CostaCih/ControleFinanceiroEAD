@@ -194,7 +194,7 @@ class MovimentoDAO extends Conexao{
         }else{
             $conexao = parent::retornarConexao();
 
-            $comando_sql = 'DELETE tb_movimento WHERE id_movimento = ?;';
+            $comando_sql = 'DELETE FROM tb_movimento WHERE id_movimento = ?;';
 
             $sql = new PDOStatement();
 
@@ -225,10 +225,12 @@ class MovimentoDAO extends Conexao{
                 $conexao->commit();
 
                 return 1;
-            }catch(Exception $ex){
-                echo $ex->getMessage();
 
+            }catch(Exception $ex){
+                
                 $conexao->rollBack();
+
+                echo $ex->getMessage();
 
                 return -1;
             }
