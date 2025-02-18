@@ -52,4 +52,16 @@ class UtilDAO
             exit;
         }
     }
+
+    public static function formatarTelefone($telefone) {
+        $telefone = preg_replace("/[^0-9]/", "", $telefone);
+
+        if (strlen($telefone) == 11) {
+            return preg_replace("/(\d{2})(\d{1})(\d{4})(\d{4})/", "($1) $2 $3-$4", $telefone);
+        } elseif (strlen($telefone) == 10) {
+            return preg_replace("/(\d{2})(\d{4})(\d{4})/", "($1) $2-$3", $telefone);
+        } else {
+            return $telefone;
+        }   
+    }
 }

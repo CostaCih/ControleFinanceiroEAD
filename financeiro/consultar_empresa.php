@@ -56,7 +56,7 @@ $empresas = $objDAO->ConsultarEmpresa();
                                     <?php foreach ($empresas as $emp) { ?>
                                         <tr class="odd gradeX">
                                             <td><?= $emp['nome_empresa'] ?></td>
-                                            <td><?= $emp['telefone_empresa'] ?></td>
+                                            <td><?= UtilDAO::formatarTelefone($emp['telefone_empresa']) ?></td>
                                             <td><?= $emp['endereco_empresa'] ?></td>
                                             <td><a href="alterar_empresa.php?cod=<?= $emp['id_empresa'] ?>" class="btn btn-warning btn-sm">Alterar</a></td>
                                         </tr>

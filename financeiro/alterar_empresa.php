@@ -110,5 +110,12 @@ if(count($dados) == 0){
         </div>
         <!-- /. PAGE WRAPPER  -->
     </div>
+    <script src="assets/js/jquery.mask.min.js"></script>
+    <script src="assets/js/jquery.mask.js"></script>
+    <script>
+        $(document).ready(function() {
+         $('#telefone').mask('(00) 0 0000-0000');
+        });        
+    </script>
 </body>
 </html>

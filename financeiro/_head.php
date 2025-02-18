@@ -17,6 +17,10 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="assets/js/jquery.metisMenu.js"></script>
+     <!-- CUSTOM SCRIPTS -->
+      <script src="assets/js/jquery.mask.js"></script>
+     <!-- CUSTOM SCRIPTS -->
+     <script src="assets/js/jquery.mask.min.js"></script>  
     <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     <!-- CUSTOM SCRIPTS -->

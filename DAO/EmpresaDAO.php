@@ -14,6 +14,8 @@ class EmpresaDAO extends Conexao
 
             $conexao = parent::retornarConexao();
 
+            $telefone = preg_replace("/[^0-9]/", "", $telefone);
+
             $comando_sql = 'INSERT INTO tb_empresa(nome_empresa, telefone_empresa, endereco_empresa, id_usuario) VALUES(?, ?, ?, ?);';
 
             $sql = new PDOStatement();
@@ -88,6 +90,8 @@ class EmpresaDAO extends Conexao
            // return 1;
 
            $conexao = parent::retornarConexao();
+
+           $telefone = preg_replace("/[^0-9]/", "", $telefone);
 
             $comando_sql = 'UPDATE tb_empresa SET nome_empresa = ?, telefone_empresa = ?, endereco_empresa = ? WHERE id_empresa = ? AND id_usuario = ?;';
 

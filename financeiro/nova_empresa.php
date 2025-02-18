@@ -64,7 +64,9 @@ if (isset($_POST['btnSalvar'])) {
     <script src="assets/js/jquery.mask.min.js"></script>
     <script src="assets/js/jquery.mask.js"></script>
     <script>
-        $('#telefone').mask('(00) 0 0000-0000');
+        $(document).ready(function() {
+         $('#telefone').mask('(00) 0 0000-0000');
+        });        
     </script>
 
 </body>
